@@ -1,4 +1,5 @@
 import "./App.css";
+import AboutMe from "./components/sections/AboutMe";
 import Footer from "./components/sections/Footer";
 import Home from "./components/sections/Home";
 import NavBar from "./components/sections/NavBar";
@@ -10,7 +11,7 @@ function App() {
         <NavBar />
         <div className="w-full bg-[#10172A] pt-10">
           <Home />
-          {/* <AboutMe /> */}
+          <AboutMe />
           {/* <Experience /> */}
           {/* <Projects /> */}
           {/* <Contact /> */}
