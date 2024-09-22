@@ -1,10 +1,10 @@
-import { headline, name } from "../data/about";
+import { headline, name } from "../../data/about";
 import { MapPin, Scaling, User } from "lucide-react";
-import { description, greetings, location, pronoun } from "../data/title";
-import resume from "../assets/CV Souheib RIACHE.pdf";
+import { description, greetings, location, pronoun } from "../../data/title";
+import resume from "../../assets/CV Souheib RIACHE.pdf";
 import TypewriterComponent from "typewriter-effect";
-import ButtonWithImage from "./Custom/ButtonWithImage";
-import icon from "../assets/icon.svg";
+import ButtonWithImage from "../Custom/ButtonWithImage";
+import icon from "../../assets/icon.svg";
 
 type Props = {};
 

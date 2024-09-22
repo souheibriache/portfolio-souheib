@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 type Props = {
   icon: any;
   label: string;

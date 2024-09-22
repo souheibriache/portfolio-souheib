@@ -1,4 +1,4 @@
-import { footer } from "../data/title";
+import { footer } from "../../data/title";
 
 type Props = {};
 

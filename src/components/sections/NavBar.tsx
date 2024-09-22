@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { navBar } from "../data/title";
-import { name } from "../data/about";
+import { navBar } from "../../data/title";
+import { name } from "../../data/about";
 import { Menu, X } from "lucide-react";
 
 type Props = {};
