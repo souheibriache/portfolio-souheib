@@ -1,4 +1,5 @@
 import "./App.css";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
@@ -6,13 +7,13 @@ function App() {
       <div className="w-full border-0 justify-center">
         <NavBar />
         <div className="w-full bg-[#10172A] pt-10">
-          <Home />
+          {/* <Home />
           <AboutMe />
           <Experience />
           <Projects />
-          <Contact />
+          <Contact /> */}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
