@@ -17,4 +17,6 @@ const navBar: { name: string; linkTo: string }[] = [
   },
 ];
 
-export { navBar };
+const footer = "Designed and developed by RIACHE Souheib";
+
+export { navBar, footer };

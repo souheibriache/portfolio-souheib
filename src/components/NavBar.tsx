@@ -34,10 +34,10 @@ const NavBar = ({}: Props) => {
           <div className="block md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
+              className="flex duration-500 transition-opacity text-white items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
             >
               {isOpen ? (
-                <X className="h-4 w-4" />
+                <X className="h-7 w-7" />
               ) : (
                 <Menu className="h-7 w-7 " />
               )}
