@@ -1,5 +1,6 @@
 import "./App.css";
 import AboutMe from "./components/sections/AboutMe";
+import Experience from "./components/sections/Experience";
 import Footer from "./components/sections/Footer";
 import Home from "./components/sections/Home";
 import NavBar from "./components/sections/NavBar";
@@ -12,7 +13,7 @@ function App() {
         <div className="w-full bg-[#10172A] pt-10">
           <Home />
           <AboutMe />
-          {/* <Experience /> */}
+          <Experience />
           {/* <Projects /> */}
           {/* <Contact /> */}
         </div>

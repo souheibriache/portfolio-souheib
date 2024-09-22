@@ -1,4 +1,3 @@
-import About from "../Custom/About";
 import Skills from "../Custom/Skills";
 
 type Props = {};

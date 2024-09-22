@@ -23,6 +23,8 @@ const greetings = "Hello!";
 const pronoun = "It's me";
 const aboutMe = "About Me";
 const mySkills = "My Skills";
+const experience = "Education and Work";
+
 const description = [
   "Software developer",
   "Full-stack developer",
@@ -38,4 +40,5 @@ export {
   description,
   aboutMe,
   mySkills,
+  experience,
 };

@@ -23,7 +23,6 @@ import nginx from "../assets/skills/nginx.png";
 import postgres from "../assets/skills/postgres.png";
 import postman from "../assets/skills/postman.png";
 import redis from "../assets/skills/redis.png";
-import socetio from "../assets/skills/socet.io.png";
 import vscode from "../assets/skills/vscode.png";
 
 const skills: { name: string; icon: string }[] = [
