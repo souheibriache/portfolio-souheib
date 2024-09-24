@@ -38,7 +38,7 @@ const Home = ({}: Props) => {
 
             <div className="flex items-center xl:w-1/2 lg:w-4/6 sm:w-11/12 w-3/4 max-[555px]:w-10/12 max-[495px]:w-11/12 max-[445px]:w-full justify-between pt-6">
               <a href={resume} target="_blank" rel="noreferrer">
-                <ButtonWithImage icon={<Scaling />} label="CV" />
+                <ButtonWithImage icon={<Scaling />} label="Resume" />
               </a>
               <a href="#contact">
                 <ButtonWithImage icon={<User />} label="Conatct" />
