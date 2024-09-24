@@ -1,7 +1,6 @@
 import { headline, name } from "../../data/about";
 import { Scaling, User } from "lucide-react";
 import { description, greetings, pronoun } from "../../data/title";
-import resume from "../../assets/CV Souheib RIACHE.pdf";
 import TypewriterComponent from "typewriter-effect";
 import ButtonWithImage from "../Custom/ButtonWithImage";
 import icon from "../../assets/icon.svg";
@@ -9,6 +8,8 @@ import icon from "../../assets/icon.svg";
 type Props = {};
 
 const Home = ({}: Props) => {
+  const resume =
+    "https://drive.google.com/file/d/1CDuInZC7tfY6i27mA9sVy_h_clsHgXYW/view?usp=sharing";
   return (
     <div className=" text-white h-screen flex flex-col w-full" id="home">
       <div id="stars" />
