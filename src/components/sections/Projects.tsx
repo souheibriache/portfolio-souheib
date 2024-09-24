@@ -1,4 +1,3 @@
-import React from "react";
 import { projectsContributions } from "../../data/title";
 import { projects } from "../../data/projects";
 import Card from "../Custom/Card";
@@ -6,9 +5,9 @@ import SectionTitle from "../Custom/SectionTitle";
 
 type Props = {};
 
-const Projects = (props: Props) => {
+const Projects = ({}: Props) => {
   return (
-    <div className="md:w-10/12 w-11/12 mx-auto text-white py-10" id="projects">
+    <div className="w-full mx-auto text-white py-10" id="projects">
       <SectionTitle title={projectsContributions} />
       <div className="lg:w-11/12 w-full mx-auto flex flex-wrap items-center justify-center gap-8 py-6">
         {projects.map((element) => {
@@ -22,6 +21,7 @@ const Projects = (props: Props) => {
                 img={element.img}
                 description={element.description}
                 link={element.link}
+                skills={element.skills}
               />
             </div>
           );

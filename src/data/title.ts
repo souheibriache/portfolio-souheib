@@ -17,10 +17,10 @@ const navBar: { name: string; linkTo: string }[] = [
   },
 ];
 
-const footer = "Designed and developed by RIACHE Souheib";
+const footer = "Copyrights © 2024.Souheib RIACHE";
 const location = "Chessy, 77700, Île-de-France";
-const greetings = "Hello!";
-const pronoun = "It's me";
+const greetings = "Bonjour!";
+const pronoun = "C'est moi";
 const aboutMe = "About Me";
 const mySkills = "Skills";
 const experience = "Education and Work";

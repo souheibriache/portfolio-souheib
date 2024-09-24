@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { TbLadder, TbLoader, TbMailForward } from "react-icons/tb";
+import { useState } from "react";
+import { TbLoader, TbMailForward } from "react-icons/tb";
 import { isValidEmail } from "../../data/checl-email";
 import SectionTitle from "../Custom/SectionTitle";
 import { toast } from "react-toastify";
@@ -84,19 +84,18 @@ const Contact = ({}: Props) => {
   return (
     <div
       id="contact"
-      className="flex items-center justify-center flex-col mx-auto md:w-10/12 w-11/12"
+      className="flex items-center justify-center flex-col mx-auto md:w-10/12 w-11/12 "
     >
       <SectionTitle title="Contact" />
-      <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
-        <p className="text-sm text-[#d3d8e8]">
-          {
-            "If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests."
-          }
+      <div className="md:w-2/3 w-full text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
+        <p className="text-2xl font-semibold text-[#fff] flex flex-col gap-2">
+          Des questions? Des propositions?{" "}
         </p>
         <div className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-base">Your Name: </label>
+            <label className="text-base">Nom: </label>
             <input
+              placeholder="John Doe"
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="text"
               maxLength={100}
@@ -110,10 +109,11 @@ const Contact = ({}: Props) => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">Your Email: </label>
+            <label className="text-base">Email: </label>
             <input
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="email"
+              placeholder="johndoe@example.com"
               maxLength={100}
               required={true}
               value={userInput.email}
@@ -136,8 +136,9 @@ const Contact = ({}: Props) => {
             <span className="absolute text-sm text-white bottom-1 right-1">
               {500 - userInput.message.length}/{messageSize}
             </span>
-            <label className="text-base">Your Message: </label>
+            <label className="text-base">Message: </label>
             <textarea
+              placeholder="écrire ton message ici..."
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               maxLength={messageSize}
               name="message"

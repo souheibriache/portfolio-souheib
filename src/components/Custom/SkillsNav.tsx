@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import { skillsCategories } from "../../data/skills";
-
 type Props = {
   categories: any[];
   activeCategory: any;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { navBar } from "../../data/title";
-import { name } from "../../data/about";
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/logo.png";
 
 type Props = {};
 
@@ -24,10 +24,7 @@ const NavBar = ({}: Props) => {
                 setActiveNav("");
               }}
             >
-              <div className="text-[#37BCF8] font-semibold text-lg">
-                <span className="name-title">{"< "}</span> {name}
-                <span className="name-title">{" />"}</span>
-              </div>
+              <img src={logo} className="h-8 w-auto" />
             </a>
           </div>
           <div className="block md:hidden">

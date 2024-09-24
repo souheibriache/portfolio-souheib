@@ -1,17 +1,16 @@
 import { headline, name } from "../../data/about";
-import { MapPin, Scaling, User } from "lucide-react";
-import { description, greetings, location, pronoun } from "../../data/title";
+import { Scaling, User } from "lucide-react";
+import { description, greetings, pronoun } from "../../data/title";
 import resume from "../../assets/CV Souheib RIACHE.pdf";
 import TypewriterComponent from "typewriter-effect";
 import ButtonWithImage from "../Custom/ButtonWithImage";
 import icon from "../../assets/icon.svg";
-import ParticlesComponent from "../Custom/Particles";
 
 type Props = {};
 
 const Home = ({}: Props) => {
   return (
-    <div className="text-white h-screen flex flex-col w-full" id="home">
+    <div className=" text-white h-screen flex flex-col w-full" id="home">
       <div id="stars" />
       <div id="stars2" />
       <div id="stars3" />
@@ -24,7 +23,7 @@ const Home = ({}: Props) => {
               <div className="font-semibold text-xl text-[#37BCF8]">{name}</div>
             </div>
             <div className="pb-4 text-xl flex gap-2">
-              <span className="text-lg">A</span>
+              {/* <span className="text-lg">A</span> */}
               <span className="text-[#37BCF8] font-bold">
                 <TypewriterComponent
                   options={{
@@ -36,10 +35,7 @@ const Home = ({}: Props) => {
               </span>
             </div>
             <div className="leading-loose">{headline}</div>
-            <div className="w-fit pt-3 flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
-              <div className="text-sm">{location}</div>
-            </div>
+
             <div className="flex items-center xl:w-1/2 lg:w-4/6 sm:w-11/12 w-3/4 max-[555px]:w-10/12 max-[495px]:w-11/12 max-[445px]:w-full justify-between pt-6">
               <a href={resume} target="_blank" rel="noreferrer">
                 <ButtonWithImage icon={<Scaling />} label="Resume" />

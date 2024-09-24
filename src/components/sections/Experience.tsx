@@ -1,6 +1,4 @@
-import experience from "../../assets/code.json";
 import { experiences } from "../../data/experience";
-import blur from "../../assets/blur-23.svg";
 // import AnimationLottie from "../Custom/AnimationLottie";
 import GlowCard from "../Custom/GlowCard";
 import { BsPersonWorkspace } from "react-icons/bs";

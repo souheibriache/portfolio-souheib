@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { skills, skillsCategories } from "../../data/skills";
-import { mySkills } from "../../data/title";
 import SkillsNav from "./SkillsNav";
 import SectionTitle from "./SectionTitle";
 
