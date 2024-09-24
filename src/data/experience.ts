@@ -1,24 +1,20 @@
-const workAndEducation = [
+export const experiences = [
   {
-    year: "MM YYYY - MM YYYY",
-    organization: "ABCDE University",
-    position: "MS CSE",
-    responsibility: "",
+    id: 1,
+    title: "Software Engineer I",
+    company: "Teton Private Ltd.",
+    duration: "(Jan 2022 - Present)",
   },
   {
-    year: "MM YYYY - MM YYYY",
-    organization: "CDEF",
-    position: "Intern",
-    responsibility:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    id: 2,
+    title: "FullStack Developer",
+    company: "Fiverr (freelance)",
+    duration: "(Jun 2021 - Jan 2022)",
   },
   {
-    year: "MM YYYY - MM YYYY",
-    organization: "GHIJ",
-    position: "Developer",
-    responsibility:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    id: 3,
+    title: "Self Employed",
+    company: "Code and build something in everyday.",
+    duration: "(Jan 2018 - Present)",
   },
 ];
-
-export { workAndEducation };

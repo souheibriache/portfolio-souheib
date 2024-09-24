@@ -5,12 +5,16 @@ import resume from "../../assets/CV Souheib RIACHE.pdf";
 import TypewriterComponent from "typewriter-effect";
 import ButtonWithImage from "../Custom/ButtonWithImage";
 import icon from "../../assets/icon.svg";
+import ParticlesComponent from "../Custom/Particles";
 
 type Props = {};
 
 const Home = ({}: Props) => {
   return (
     <div className="text-white h-screen flex flex-col w-full" id="home">
+      <div id="stars" />
+      <div id="stars2" />
+      <div id="stars3" />
       <div className="h-screen flex items-center md:w-10/12 w-11/12 mx-auto">
         <div className="flex justify-between items-center m-auto">
           <div className="sm:w-7/12 w-10/12 max-[495px]:w-11/12 sm:mx-0 mx-auto">

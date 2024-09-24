@@ -22,8 +22,9 @@ const location = "Chessy, 77700, Île-de-France";
 const greetings = "Hello!";
 const pronoun = "It's me";
 const aboutMe = "About Me";
-const mySkills = "My Skills";
+const mySkills = "Skills";
 const experience = "Education and Work";
+const projectsContributions = "Projects and Contributions";
 
 const description = [
   "Software developer",
@@ -41,4 +42,5 @@ export {
   aboutMe,
   mySkills,
   experience,
+  projectsContributions,
 };

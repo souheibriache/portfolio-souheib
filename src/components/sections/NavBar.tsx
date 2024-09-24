@@ -10,7 +10,6 @@ const NavBar = ({}: Props) => {
   const [activeNav, setActiveNav] = useState<string>("");
 
   const onClickHandler = (element: React.MouseEvent<HTMLAnchorElement>) => {
-    console.log({ element: element.currentTarget.id });
     setActiveNav(element.currentTarget.id);
   };
 

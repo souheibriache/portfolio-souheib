@@ -10,10 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.13.3",
     "lucide-react": "^0.445.0",
     "portfolio-souheib": "file:",
     "react": "^18.3.1",
+    "react-awesome-reveal": "^4.2.14",
     "react-dom": "^18.3.1",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.3.0",
+    "react-reveal": "^1.2.2",
+    "react-toastify": "^10.0.5",
+    "react-tsparticles": "^2.12.2",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
