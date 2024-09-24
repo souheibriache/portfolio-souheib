@@ -31,7 +31,7 @@ const projects: {
     img: wedort,
     description:
       "Au sein de Smartinia, j'étais responsable de la conception et du développement des fonctionnalités frontend et backend d'une application similaire à Uber pour les objets lourds (VTC). Gestion en temps réel pour clients, conducteurs, partenaires et personnel, avec création de trois tableaux de bord et deux applications mobiles.",
-    link: "wedort.com",
+    link: "https://wedort.com",
     skills: [
       nestjs,
       typescript,
