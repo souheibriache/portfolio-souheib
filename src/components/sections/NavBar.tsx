@@ -24,7 +24,7 @@ const NavBar = ({}: Props) => {
                 setActiveNav("");
               }}
             >
-              <img src={logo} className="h-8 w-auto" />
+              <img src={logo} className="h-8 w-auto xl:h-12 2xl:h-20" />
             </a>
           </div>
           <div className="block md:hidden">
@@ -44,7 +44,7 @@ const NavBar = ({}: Props) => {
               isOpen ? "block" : "hidden"
             }`}
           >
-            <div className="text-sm md:flex md:flex-grow gap-5">
+            <div className="text-sm md:flex items-center justify-center md:flex-grow gap-5 lg:gap-8 xl:gap-12">
               {navBar.map((element) => {
                 return (
                   <div key={element.name}>
@@ -55,7 +55,7 @@ const NavBar = ({}: Props) => {
                         activeNav === element.name
                           ? "text-[#37BCF8] font-bold"
                           : "text-white font-semibold"
-                      } hover:text-[#37BCF8] block mt-4 md:inline-block md:mt-0 text-white-200`}
+                      } hover:text-[#37BCF8] block text-center mt-4 md:inline-block md:mt-0 text-white-200 lg:text-lg xl:text-xl 2xl:text-3xl`}
                       onClick={onClickHandler}
                     >
                       {element.name}

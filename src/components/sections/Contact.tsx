@@ -84,16 +84,16 @@ const Contact = ({}: Props) => {
   return (
     <div
       id="contact"
-      className="flex items-center justify-center flex-col mx-auto md:w-10/12 w-11/12 "
+      className="flex my-4 items-center justify-center flex-col mx-auto md:w-10/12 w-11/12 "
     >
       <SectionTitle title="Contact" />
       <div className="md:w-2/3 w-full text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
-        <p className="text-2xl font-semibold text-[#fff] flex flex-col gap-2">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[#fff] flex flex-col gap-2">
           Des questions? Des propositions?{" "}
         </p>
-        <div className="mt-6 flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <label className="text-base">Nom: </label>
+        <div className="mt-6 flex flex-col gap-4 text-xs sm:text-sm mg:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+          <div className="flex flex-col gap-2 ">
+            <label className="">Nom: </label>
             <input
               placeholder="John Doe"
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
@@ -109,7 +109,7 @@ const Contact = ({}: Props) => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">Email: </label>
+            <label>Email: </label>
             <input
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="email"
@@ -133,10 +133,10 @@ const Contact = ({}: Props) => {
           </div>
 
           <div className="flex flex-col gap-2 relative">
-            <span className="absolute text-sm text-white bottom-1 right-1">
+            <span className="absolute text-xs sm:text-xs md:text-xs lg:text-base xl:text-lg 2xl:text-xl opacity-70 text-white bottom-1 right-1">
               {500 - userInput.message.length}/{messageSize}
             </span>
-            <label className="text-base">Message: </label>
+            <label>Message: </label>
             <textarea
               placeholder="écrire ton message ici..."
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
@@ -159,15 +159,15 @@ const Contact = ({}: Props) => {
             )}
             <button
               disabled={sendButtonDisables()}
-              className="disabled:opacity-80 flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-[#37BCF8] to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
+              className="disabled:opacity-80 flex flex-row items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-[#37BCF8] to-violet-600 px-5 md:px-12 py-2 md:py-3 text-center text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
               role="button"
               onClick={handleSendMail}
             >
-              <span>Send Message</span>
+              <span>Envoyer</span>
               {loading ? (
                 <TbLoader className="animate-spin" />
               ) : (
-                <TbMailForward className="mt-1" size={18} />
+                <TbMailForward className="w-auto h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7" />
               )}
             </button>
           </div>

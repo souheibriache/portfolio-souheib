@@ -6,7 +6,8 @@ import react from "../assets/skills/react.png";
 import node from "../assets/skills/nodejs.png";
 import html from "../assets/skills/html.png";
 import css from "../assets/skills/css-3.png";
-import githubActions from "../assets/skills/GitHub Actions.png";
+import jenkins from "../assets/skills/jenkins.png";
+import swagger from "../assets/skills/swagger.png";
 import tailwind from "../assets/skills/Tailwind CSS.png";
 import angular from "../assets/skills/angular.png";
 import docker from "../assets/skills/docker.png";
@@ -108,6 +109,11 @@ const skills: { name: string; icon: string; category: string }[] = [
     icon: graphql,
     category: skillsCategories[2],
   },
+  {
+    name: "Swagger",
+    icon: swagger,
+    category: skillsCategories[2],
+  },
   // Outils
   {
     name: "Docker",
@@ -115,8 +121,8 @@ const skills: { name: string; icon: string; category: string }[] = [
     category: skillsCategories[4],
   },
   {
-    name: "Github Actions",
-    icon: githubActions,
+    name: "Jenkins",
+    icon: jenkins,
     category: skillsCategories[4],
   },
   {

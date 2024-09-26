@@ -6,7 +6,7 @@ type Props = {
 
 const SkillsNav = ({ categories, activeCategory, onCategoryChange }: Props) => {
   return (
-    <div className="w-full h-16 nav flex flex-row justify-between rounded-t-md overflow-hidden bg-white bg-opacity-10 text-xs sm:text-sm md:text-base">
+    <div className="w-full h-16 lg:h-20 xl:h-24 2xl:h-28 nav flex flex-row justify-between rounded-t-md overflow-hidden bg-white bg-opacity-10 text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-3xl">
       {categories.map((category, index) => (
         <div
           onClick={() => onCategoryChange(category)}

@@ -9,6 +9,7 @@ import Contact from "./components/sections/Contact";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ScrollToTop from "./components/Custom/ScrollToTop";
+import Hero from "./components/sections/Hero";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <NavBar />
         <div className="w-full bg-[#10172A] pt-10">
           <Fade>
+            <Hero />
             <Home />
             <AboutMe />
             <Experience />

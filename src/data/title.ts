@@ -1,6 +1,6 @@
 const navBar: { name: string; linkTo: string }[] = [
   {
-    name: "About",
+    name: "A propos",
     linkTo: "#about",
   },
   {
@@ -8,7 +8,7 @@ const navBar: { name: string; linkTo: string }[] = [
     linkTo: "#experience",
   },
   {
-    name: "Projects",
+    name: "Projets",
     linkTo: "#projects",
   },
   {
@@ -19,12 +19,12 @@ const navBar: { name: string; linkTo: string }[] = [
 
 const footer = "Copyrights © 2024.Souheib RIACHE";
 const location = "Chessy, 77700, Île-de-France";
-const greetings = "Bonjour!";
+const greetings = "Qui suis je ?";
 const pronoun = "C'est moi";
 const aboutMe = "About Me";
 const mySkills = "Skills";
 const experience = "Education and Work";
-const projectsContributions = "Projects and Contributions";
+const projectsContributions = "Projets";
 
 const description = [
   "Software developer",

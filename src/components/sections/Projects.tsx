@@ -8,7 +8,7 @@ type Props = {};
 const Projects = ({}: Props) => {
   return (
     <div className="w-full mx-auto text-white py-10" id="projects">
-      <SectionTitle title={projectsContributions} />
+      <SectionTitle title={"Projects"} />
       <div className="lg:w-11/12 w-full mx-auto flex flex-wrap items-center justify-center gap-8 py-6">
         {projects.map((element) => {
           return (
