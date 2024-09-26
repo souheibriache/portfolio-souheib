@@ -1,4 +1,3 @@
-import { projectsContributions } from "../../data/title";
 import { projects } from "../../data/projects";
 import Card from "../Custom/Card";
 import SectionTitle from "../Custom/SectionTitle";

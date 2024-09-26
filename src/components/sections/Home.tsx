@@ -1,9 +1,8 @@
-import { headline, name } from "../../data/about";
+import { headline } from "../../data/about";
 import { Scaling, User } from "lucide-react";
-import { description, greetings, pronoun } from "../../data/title";
+import { description, greetings } from "../../data/title";
 import TypewriterComponent from "typewriter-effect";
 import ButtonWithImage from "../Custom/ButtonWithImage";
-import icon from "../../assets/icon.svg";
 import picture from "../../assets/picture.png";
 
 type Props = {};
