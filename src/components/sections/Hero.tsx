@@ -1,14 +1,11 @@
-import { Mouse, ScrollIcon } from "lucide-react";
-import React, { useCallback, useEffect, useState } from "react";
-import Particles from "react-tsparticles";
-import { Container, Engine } from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim";
+import { Mouse } from "lucide-react";
+import { useEffect, useState } from "react";
 import ParticlesComponent from "../Custom/ParticlesComponent";
 
 const SCROLL_DOWN = "invisible md:visible animate-cb absolute bottom-16 mx-0";
 const SCROLL_THRESHOLD = 50;
 type Props = {};
-const Hero = (props: Props) => {
+const Hero = ({}: Props) => {
   const [btnCls, setBtnCls] = useState(SCROLL_DOWN);
   useEffect(() => {
     const handleScroll = () => {

@@ -5,7 +5,7 @@ import { useCallback } from "react";
 
 type Props = {};
 
-const ParticlesComponent = (props: Props) => {
+const ParticlesComponent = ({}: Props) => {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
 
