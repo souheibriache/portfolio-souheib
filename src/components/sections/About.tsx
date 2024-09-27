@@ -7,13 +7,13 @@ import picture from "../../assets/picture.png";
 
 type Props = {};
 
-const Home = ({}: Props) => {
+const About = ({}: Props) => {
   const resume =
     "https://drive.google.com/file/d/1CDuInZC7tfY6i27mA9sVy_h_clsHgXYW/view?usp=sharing";
   return (
     <div
       className=" text-white h-full lg:h-screen flex flex-col w-full pt-20 xl:pt-0"
-      id="home"
+      id="about"
     >
       <div className="h-full flex items-center md:w-10/12 w-11/12 mx-auto">
         <div className="flex justify-between items-center m-auto">
@@ -73,4 +73,4 @@ const Home = ({}: Props) => {
     </div>
   );
 };
-export default Home;
+export default About;

@@ -19,7 +19,7 @@ const NavBar = ({}: Props) => {
         <div className="md:w-10/12 w-11/12 mx-auto flex flex-shrink-0 flex-wrap justify-between items-center">
           <div>
             <a
-              href="#home"
+              href="#hero"
               onClick={() => {
                 setActiveNav("");
               }}

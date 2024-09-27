@@ -22,7 +22,10 @@ const Hero = ({}: Props) => {
   }, []);
 
   return (
-    <div className="text-white h-screen flex flex-col w-full relative overflow-hidden">
+    <div
+      id="hero"
+      className="text-white h-screen flex flex-col w-full relative overflow-hidden"
+    >
       <ParticlesComponent />
 
       <div className="absolute h-full w-full bg-black bg-opacity-20 flex flex-col justify-center gap-6 md:gap-12 xl:gap-18 items-center px-4    ">
@@ -37,7 +40,7 @@ const Hero = ({}: Props) => {
         </p>
 
         <button className={btnCls}>
-          <a href="#home">
+          <a href="#about">
             <Mouse className="h-8 w-6 md:h-12 md:w-8 xl:h-16 xl:w-10 2xl:h-28 2xl:w-20  rounded-full bg-gradient-to-r from-[#37BCF8] to-violet-600" />
           </a>
         </button>

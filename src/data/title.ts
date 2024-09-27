@@ -4,6 +4,10 @@ const navBar: { name: string; linkTo: string }[] = [
     linkTo: "#about",
   },
   {
+    name: "Skills",
+    linkTo: "#skills",
+  },
+  {
     name: "Experience",
     linkTo: "#experience",
   },
