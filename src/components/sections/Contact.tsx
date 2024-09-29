@@ -8,6 +8,12 @@ import emailjs from "@emailjs/browser";
 type Props = {};
 
 const Contact = ({}: Props) => {
+  const {
+    VITE_EMAILJS_SERVICE_ID,
+    VITE_EMAILJS_TEMPLATE_ID,
+    VITE_EMAILJS_PUBLIC_KEY,
+  } = import.meta.env;
+
   const messageSize = 500;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({ email: false, required: false });
@@ -44,19 +50,16 @@ const Contact = ({}: Props) => {
       setError({ ...error, required: false });
     }
 
-    const serviceID =
-      import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_ocqz84q";
-    const templateID =
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_c1pgs4b";
     const options = {
-      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "oAY48D47Dz9elgdSE",
+      publicKey: VITE_EMAILJS_PUBLIC_KEY,
     };
+    console.log({ env: import.meta.env });
 
     try {
       setLoading(true);
       const res = await emailjs.send(
-        serviceID,
-        templateID,
+        VITE_EMAILJS_SERVICE_ID,
+        VITE_EMAILJS_TEMPLATE_ID,
         {
           to_name: "Souheib",
           from_name: userInput.name,
