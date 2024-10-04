@@ -16,7 +16,7 @@ const Experience = ({}: Props) => {
         <div className="">
           <div>
             <div className="flex flex-col gap-6">
-              <Fade>
+              <Fade triggerOnce direction="right" duration={700}>
                 {experiences.map((experience) => (
                   <GlowCard
                     key={experience.id}
