@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { skills, skillsCategories } from "../../data/skills";
-import SkillsNav from "./SkillsNav";
-import SectionTitle from "./SectionTitle";
+import SkillsNav from "../Custom/SkillsNav";
+import SectionTitle from "../Custom/SectionTitle";
+import { LanguageContext } from "../../context/languageContext";
+import { sections } from "../../data/componentsText";
 
 type Props = {};
 
 const Skills = ({}: Props) => {
-  const [activeCategory, setActiveCategory] = useState(skillsCategories[0]);
-  const [categories] = useState<string[]>(skillsCategories);
+  const { language } = useContext(LanguageContext);
+  const [activeCategory, setActiveCategory] = useState(
+    skillsCategories[0].category
+  );
+  const [categories] =
+    useState<{ category: string; name: { FR: string; EN: string } }[]>(
+      skillsCategories
+    );
   const [currentSkills, setCurrentSkills] = useState<any[]>(
     skills.filter((skill) => skill.category === activeCategory)
   );
@@ -23,7 +31,7 @@ const Skills = ({}: Props) => {
       className="md:w-10/12 w-11/12 mx-auto flex min-[850px]:flex-row min-[850px]:flex-wrap flex-col min-[850px]:justify-center text-white pt-8 pb-14"
     >
       <div className="w-full h-full min-h-full">
-        <SectionTitle title={"Skills"} />
+        <SectionTitle title={sections[1].name[language]} />
         <SkillsNav
           categories={categories}
           activeCategory={activeCategory}

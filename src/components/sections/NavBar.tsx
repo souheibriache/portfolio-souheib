@@ -1,11 +1,21 @@
-import React, { useState } from "react";
-import { navBar } from "../../data/title";
+import React, { useContext, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/logo.png";
+import { LanguageContext } from "../../context/languageContext"; // Make sure this import is correct.
+import { sections } from "../../data/componentsText";
+import LanguageSwitcher from "../Custom/LanguageSwitcher";
 
 type Props = {};
 
 const NavBar = ({}: Props) => {
+  const languageContext = useContext(LanguageContext);
+
+  // Ensure `languageContext` is available
+  if (!languageContext) {
+    throw new Error("LanguageContext must be used within a LanguageProvider");
+  }
+
+  const { language = "FR", toggleLanguage } = languageContext;
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeNav, setActiveNav] = useState<string>("");
 
@@ -44,25 +54,30 @@ const NavBar = ({}: Props) => {
               isOpen ? "block" : "hidden"
             }`}
           >
-            <div className="text-sm md:flex items-center justify-center md:flex-grow gap-5 lg:gap-8 xl:gap-12">
-              {navBar.map((element) => {
+            <div className="text-sm text-white lg:text-lg xl:text-xl 2xl:text-3xl md:flex items-center justify-center md:flex-grow md:gap-5 lg:gap-8 xl:gap-12">
+              {sections.map((element) => {
                 return (
-                  <div key={element.name}>
+                  <div key={element.name[language]}>
                     <a
                       href={element.linkTo}
-                      id={element.name}
+                      id={element.name[language]}
                       className={`${
-                        activeNav === element.name
+                        activeNav === element.name[language]
                           ? "text-[#37BCF8] font-bold"
                           : "text-white font-semibold"
-                      } hover:text-[#37BCF8] block text-center mt-4 md:inline-block md:mt-0 text-white-200 lg:text-lg xl:text-xl 2xl:text-3xl`}
+                      } hover:text-[#37BCF8] block text-center text-nowrap mt-4 md:inline-block md:mt-0`}
                       onClick={onClickHandler}
                     >
-                      {element.name}
+                      {element.name[language]}
                     </a>
                   </div>
                 );
               })}
+              {/* Language switcher */}
+              <LanguageSwitcher
+                language={language}
+                toggleLanguage={toggleLanguage}
+              />
             </div>
           </div>
         </div>

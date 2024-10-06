@@ -4,6 +4,9 @@ import javascript from "../../assets/skills/js.png";
 import typescript from "../../assets/skills/typescript.png";
 import angular from "../../assets/skills/angular.png";
 import nestjs from "../../assets/skills/nestjs.png";
+import { useContext } from "react";
+import { LanguageContext } from "../../context/languageContext";
+import { visiter } from "../../data/componentsText";
 
 type Props = {
   name: string;
@@ -20,6 +23,7 @@ const Card = ({
   link,
   skills = [javascript, typescript, angular, nestjs],
 }: Props) => {
+  const { language } = useContext(LanguageContext);
   return (
     <div className="w-full shadow-lg bg-[#1f2945] rounded-lg flex flex-col items-center h-full md:max-h-none lg:max-h-[28rem] xl:max-h-[35rem] 2xl:max-h-[49rem] ">
       <div className="h-110 overflow-hidden flex flex-col items-center justify-end">
@@ -50,7 +54,7 @@ const Card = ({
               icon={
                 <SquareArrowOutUpRight className="h-5 md:h-6 lg:h-5 xl:h-8 2xl:h-10 w-auto" />
               }
-              label={"Visiter"}
+              label={visiter[language]}
               imageStyle="w-1/6"
             />
           </a>

@@ -1,50 +1,7 @@
-const navBar: { name: string; linkTo: string }[] = [
-  {
-    name: "A propos",
-    linkTo: "#about",
-  },
-  {
-    name: "Skills",
-    linkTo: "#skills",
-  },
-  {
-    name: "Experience",
-    linkTo: "#experience",
-  },
-  {
-    name: "Projets",
-    linkTo: "#projects",
-  },
-  {
-    name: "Contact",
-    linkTo: "#contact",
-  },
-];
+const name = "SOUHEIB RIACHE";
+const title = { FR: "Développeur web Junior.", EN: "Junior Web Developer" };
+const tagline = "Make it work, Make it better, Make it faster...";
 
 const footer = "Copyrights © 2024.Souheib RIACHE";
-const location = "Chessy, 77700, Île-de-France";
-const greetings = "Qui suis je ?";
-const pronoun = "C'est moi";
-const aboutMe = "About Me";
-const mySkills = "Skills";
-const experience = "Education and Work";
-const projectsContributions = "Projets";
 
-const description = [
-  "Software developer",
-  "Full-stack developer",
-  "Web developer",
-];
-
-export {
-  navBar,
-  footer,
-  location,
-  greetings,
-  pronoun,
-  description,
-  aboutMe,
-  mySkills,
-  experience,
-  projectsContributions,
-};
+export { footer, name, title, tagline };

@@ -14,10 +14,10 @@ const Footer = ({}: Props) => {
   return (
     <div className="p-12 gap-3 lg:gap-4 xl:gap-5 2xl:gap-6 mt-auto flex flex-wrap justify-center items-center flex-col w-full bg-[#09132e] text-[#c9e1ec] text-sm shadow-lg">
       <div className="flex flex-row gap-3 sm:gap-4 lg:gap-5 2xl:gap-6">
-        <a href="https://linkedin.com" target="_blank">
+        <a href="https://www.linkedin.com/in/souheib-riache/" target="_blank">
           <TbBrandLinkedin className={socialClassName} />
         </a>
-        <a href="https://github.com" target="_blank">
+        <a href="https://github.com/souheibriache/" target="_blank">
           <TbBrandGithub className={socialClassName} />
         </a>
         <a href="mailto:souheibriache@gmail.com" target="_blank">

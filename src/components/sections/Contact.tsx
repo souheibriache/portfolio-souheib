@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { TbLoader, TbMailForward } from "react-icons/tb";
 import { isValidEmail } from "../../data/checl-email";
 import SectionTitle from "../Custom/SectionTitle";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { Fade } from "react-awesome-reveal";
+import { contactText, sections } from "../../data/componentsText";
+import { LanguageContext } from "../../context/languageContext";
 
 type Props = {};
 
 const Contact = ({}: Props) => {
+  const { language } = useContext(LanguageContext);
   const {
     VITE_EMAILJS_SERVICE_ID,
     VITE_EMAILJS_TEMPLATE_ID,
@@ -71,7 +74,7 @@ const Contact = ({}: Props) => {
       );
 
       if (res.status === 200) {
-        toast.success("Message sent successfully!");
+        toast.success(contactText.successMessage[language]);
         setUserInput({
           name: "",
           email: "",
@@ -79,7 +82,7 @@ const Contact = ({}: Props) => {
         });
       }
     } catch (error: any) {
-      toast.error(error?.text || error);
+      toast.error(contactText.failureMessage[language]);
     } finally {
       setLoading(false);
     }
@@ -90,18 +93,18 @@ const Contact = ({}: Props) => {
       id="contact"
       className="flex my-4 items-center justify-center flex-col mx-auto md:w-10/12 w-11/12 "
     >
-      <SectionTitle title="Contact" />
+      <SectionTitle title={sections[4].name[language]} />
 
       <div className="md:w-2/3 w-full text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
         <Fade triggerOnce direction="up" duration={700}>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[#fff] flex flex-col gap-2">
-            Des questions? Des propositions?{" "}
+            {contactText.title[language]}
           </p>
           <div className="mt-6 flex flex-col gap-4 text-xs sm:text-sm mg:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
             <div className="flex flex-col gap-2 ">
-              <label className="">Nom: </label>
+              <label className="">{contactText.labels.name[language]} </label>
               <input
-                placeholder="John Doe"
+                placeholder={contactText.placeholders.name[language]}
                 className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
                 type="text"
                 maxLength={100}
@@ -115,11 +118,11 @@ const Contact = ({}: Props) => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label>Email: </label>
+              <label>{contactText.labels.email[language]}</label>
               <input
                 className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
                 type="email"
-                placeholder="johndoe@example.com"
+                placeholder={contactText.placeholders.name[language]}
                 maxLength={100}
                 required={true}
                 value={userInput.email}
@@ -133,7 +136,7 @@ const Contact = ({}: Props) => {
               />
               {error.email && (
                 <p className="text-sm text-red-400">
-                  Please provide a valid email!
+                  {contactText.errors.emailInvalid[language]}
                 </p>
               )}
             </div>
@@ -142,9 +145,9 @@ const Contact = ({}: Props) => {
               <span className="absolute text-xs sm:text-xs md:text-xs lg:text-base xl:text-lg 2xl:text-xl opacity-70 text-white bottom-1 right-1">
                 {500 - userInput.message.length}/{messageSize}
               </span>
-              <label>Message: </label>
+              <label>{contactText.labels.message[language]} </label>
               <textarea
-                placeholder="écrire ton message ici..."
+                placeholder={contactText.placeholders.message[language]}
                 className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
                 maxLength={messageSize}
                 name="message"
@@ -160,7 +163,7 @@ const Contact = ({}: Props) => {
             <div className="flex flex-col items-center gap-2">
               {error.required && (
                 <p className="text-sm text-red-400">
-                  Email and Message are required!
+                  {contactText.errors.required[language]}
                 </p>
               )}
               <button
@@ -169,7 +172,7 @@ const Contact = ({}: Props) => {
                 role="button"
                 onClick={handleSendMail}
               >
-                <span>Envoyer</span>
+                <span>{contactText.button.send[language]}</span>
                 {loading ? (
                   <TbLoader className="animate-spin" />
                 ) : (

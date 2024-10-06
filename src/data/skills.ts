@@ -27,11 +27,45 @@ import postman from "../assets/skills/postman.png";
 import redis from "../assets/skills/redis.png";
 import vscode from "../assets/skills/vscode.png";
 const skillsCategories = [
-  "Langages",
-  "Front-end",
-  "Back-end",
-  "Bases de données",
-  "Outils",
+  {
+    category: "Langages",
+    name: {
+      FR: "Langages",
+      EN: "Langages",
+    },
+  },
+
+  {
+    category: "Front-end",
+    name: {
+      FR: "Front-end",
+      EN: "Frontend",
+    },
+  },
+
+  {
+    category: "Back-end",
+    name: {
+      FR: "Back-end",
+      EN: "Backend",
+    },
+  },
+
+  {
+    category: "Bases de données",
+    name: {
+      FR: "Bases de données",
+      EN: "Databases",
+    },
+  },
+
+  {
+    category: "Outils",
+    name: {
+      FR: "Outils",
+      EN: "Tools",
+    },
+  },
 ];
 
 // Adding a category to each skill manually
@@ -40,146 +74,146 @@ const skills: { name: string; icon: string; category: string }[] = [
   {
     name: "Python",
     icon: python,
-    category: skillsCategories[0],
+    category: skillsCategories[0].category,
   },
   {
     name: "Javascript",
     icon: javaScript,
-    category: skillsCategories[0],
+    category: skillsCategories[0].category,
   },
   {
     name: "Typescript",
     icon: typescript,
-    category: skillsCategories[0],
+    category: skillsCategories[0].category,
   },
   {
     name: "Java",
     icon: java,
-    category: skillsCategories[0],
+    category: skillsCategories[0].category,
   },
   // Front-end
   {
     name: "React JS",
     icon: react,
-    category: skillsCategories[1],
+    category: skillsCategories[1].category,
   },
   {
     name: "Angular",
     icon: angular,
-    category: skillsCategories[1],
+    category: skillsCategories[1].category,
   },
   {
     name: "Tailwind",
     icon: tailwind,
-    category: skillsCategories[1],
+    category: skillsCategories[1].category,
   },
   {
     name: "HTML",
     icon: html,
-    category: skillsCategories[1],
+    category: skillsCategories[1].category,
   },
   {
     name: "CSS",
     icon: css,
-    category: skillsCategories[1],
+    category: skillsCategories[1].category,
   },
   // Back-end
   {
     name: "Node JS",
     icon: node,
-    category: skillsCategories[2],
+    category: skillsCategories[2].category,
   },
   {
     name: "NestJs",
     icon: nestjs,
-    category: skillsCategories[2],
+    category: skillsCategories[2].category,
   },
   {
     name: "Next.js",
     icon: nextjs,
-    category: skillsCategories[2],
+    category: skillsCategories[2].category,
   },
   {
     name: "Nginx",
     icon: nginx,
-    category: skillsCategories[2],
+    category: skillsCategories[2].category,
   },
   {
     name: "GraphQl",
     icon: graphql,
-    category: skillsCategories[2],
+    category: skillsCategories[2].category,
   },
   {
     name: "Swagger",
     icon: swagger,
-    category: skillsCategories[2],
+    category: skillsCategories[2].category,
   },
   // Outils
   {
     name: "Docker",
     icon: docker,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   {
     name: "Jenkins",
     icon: jenkins,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   {
     name: "Git",
     icon: git,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   {
     name: "Figma",
     icon: figma,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   {
     name: "Jira",
     icon: jira,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   {
     name: "Kubernetes",
     icon: kubernetes,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   {
     name: "Linux",
     icon: linux,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   {
     name: "Postman",
     icon: postman,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   {
     name: "VS Code",
     icon: vscode,
-    category: skillsCategories[4],
+    category: skillsCategories[4].category,
   },
   // Bases de données
   {
     name: "Mongodb",
     icon: mongodb,
-    category: skillsCategories[3],
+    category: skillsCategories[3].category,
   },
   {
     name: "MySQL",
     icon: mysql,
-    category: skillsCategories[3],
+    category: skillsCategories[3].category,
   },
   {
     name: "PostgreSQL",
     icon: postgres,
-    category: skillsCategories[3],
+    category: skillsCategories[3].category,
   },
   {
     name: "Redis",
     icon: redis,
-    category: skillsCategories[3],
+    category: skillsCategories[3].category,
   },
 ];
 

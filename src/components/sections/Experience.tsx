@@ -4,13 +4,17 @@ import GlowCard from "../Custom/GlowCard";
 import { BsPersonWorkspace } from "react-icons/bs";
 import SectionTitle from "../Custom/SectionTitle";
 import { Fade } from "react-awesome-reveal";
+import { sections } from "../../data/componentsText";
+import { useContext } from "react";
+import { LanguageContext } from "../../context/languageContext";
 
 type Props = {};
 
 const Experience = ({}: Props) => {
+  const { language } = useContext(LanguageContext);
   return (
     <div id="experience" className="relative z-50 mx-auto md:w-10/12 w-11/12">
-      <SectionTitle title={"Experience"} />
+      <SectionTitle title={sections[2].name[language]} />
 
       <div className="py-8">
         <div className="">
@@ -29,7 +33,7 @@ const Experience = ({}: Props) => {
                         </div>
                         <div>
                           <p className="text-base sm:text-xl xl:text-3xl mb-2 font-medium uppercase">
-                            {experience.title}
+                            {experience.title[language]}
                           </p>
                           <p className="text-sm sm:text-base xl:text-2xl ">
                             {experience.company}
@@ -38,7 +42,7 @@ const Experience = ({}: Props) => {
                       </div>
                       <div className="flex justify-start">
                         <p className="text-xs sm:text-sm xl:text-xl text-[#37BCF8]">
-                          {experience.duration}
+                          {experience.duration[language]}
                         </p>
                       </div>
                     </div>

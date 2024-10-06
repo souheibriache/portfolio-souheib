@@ -1,11 +1,14 @@
 import { Mouse } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ParticlesComponent from "../Custom/ParticlesComponent";
+import { name, tagline, title } from "../../data/title";
+import { LanguageContext } from "../../context/languageContext";
 
 const SCROLL_DOWN = "invisible md:visible animate-cb absolute bottom-16 mx-0";
 const SCROLL_THRESHOLD = 50;
 type Props = {};
 const Hero = ({}: Props) => {
+  const { language } = useContext(LanguageContext);
   const [btnCls, setBtnCls] = useState(SCROLL_DOWN);
   useEffect(() => {
     const handleScroll = () => {
@@ -30,13 +33,13 @@ const Hero = ({}: Props) => {
 
       <div className="absolute h-full w-full bg-black bg-opacity-20 flex flex-col justify-center gap-6 md:gap-12 xl:gap-18 items-center px-4    ">
         <p className="text-center text-xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-9xl font-semibold">
-          RIACHE SOUHEIB
+          {name}
         </p>
         <p className="text-center text-xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-9xl font-semibold bg-gradient-to-r from-[#37BCF8] to-violet-600 inline-block text-transparent bg-clip-text">
-          Développeur web Junior.
+          {title[language]}
         </p>
         <p className="text-center text-xs sm:text-base md:text-lg lg:text-xl xl:text-3xl 2xl:text-5xl">
-          Make it work, Make it better, Make it faster...
+          {tagline}
         </p>
 
         <button className={btnCls}>
