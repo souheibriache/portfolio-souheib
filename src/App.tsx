@@ -11,15 +11,11 @@ import ScrollToTop from "./components/Custom/ScrollToTop";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
 import { useEffect, useState } from "react";
-import {
-  LanguageContext,
-  LanguageContextType,
-  LanguageType,
-} from "./context/languageContext";
+import { LanguageContext, LanguageType } from "./context/languageContext";
 import { LANGUAGE_KEY } from "./utils/constants";
 
 function App() {
-  const [language, setLanguage] = useState<LanguageType | null>(null);
+  const [language, setLanguage] = useState<LanguageType>("FR");
 
   useEffect(() => {
     const currentLanguage = localStorage.getItem(LANGUAGE_KEY);
