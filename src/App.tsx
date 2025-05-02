@@ -1,3 +1,5 @@
+"use client";
+
 import { Fade } from "react-awesome-reveal";
 import Experience from "./components/sections/Experience";
 import Footer from "./components/sections/Footer";
@@ -11,7 +13,7 @@ import ScrollToTop from "./components/Custom/ScrollToTop";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
 import { useEffect, useState } from "react";
-import { LanguageContext, LanguageType } from "./context/languageContext";
+import { LanguageContext, type LanguageType } from "./context/languageContext";
 import { LANGUAGE_KEY } from "./utils/constants";
 
 function App() {
@@ -21,26 +23,25 @@ function App() {
     const currentLanguage = localStorage.getItem(LANGUAGE_KEY);
     if (currentLanguage) setLanguage(currentLanguage as LanguageType);
   }, []);
+
   const toggleLanguage = (language: LanguageType) => {
     setLanguage(language);
     localStorage.setItem(LANGUAGE_KEY, language);
-    // location.reload();
   };
 
   return (
     <LanguageContext.Provider value={{ language, toggleLanguage }}>
-      <div className=" w-full h-screen font-mono">
-        <ToastContainer />
-        <div className="relative w-full border-0 h-full flex flex-col items-center justify-start ">
+      <div className="w-full h-screen font-mono">
+        <ToastContainer position="bottom-right" theme="dark" />
+        <div className="relative w-full h-full flex flex-col items-center justify-start">
           <NavBar />
           <div className="w-full bg-[#10172A] pt-10">
-            <Fade>
+            <Fade cascade damping={0.1}>
               <Hero />
               <About />
               <Skills />
               <Experience />
               <Projects />
-
               <Contact />
             </Fade>
           </div>

@@ -5,20 +5,83 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 ::-webkit-scrollbar {
-  background-color: #10172A;
+  background-color: #10172a;
   border-radius: 10px;
-  width: 5px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #37BCF8;
+  background: linear-gradient(to bottom, #37bcf8, #8b5cf6);
   border-radius: 10px;
   width: 100%;
+}
+
+/* Glow card styles */
+.glow-container {
+  --gap: 32px;
+  --blur: 12px;
+  --spread: 80;
+  --direction: row;
+  display: flex;
+  flex-direction: var(--direction);
+  gap: var(--gap);
+  position: relative;
+}
+
+.glow-card {
+  --active: 0;
+  --start: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-card .glows {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  filter: blur(var(--blur));
+  opacity: var(--active, 0);
+  transition: opacity 0.4s;
+}
+
+.glow-card .glows::before {
+  content: "";
+  position: absolute;
+  width: calc(var(--spread) * 1%);
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(calc(var(--start) * 1deg)) translateY(calc(var(--spread) * -0.5px));
+  background: conic-gradient(#37bcf8, #8b5cf6, #37bcf8);
+  border-radius: 50%;
+}
+
+/* Animation for scroll down button */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
 }

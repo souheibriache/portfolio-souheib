@@ -1,30 +1,50 @@
-import {
-  TbBrandGithub,
-  TbBrandGmail,
-  TbBrandLinkedin,
-  TbPhone,
-} from "react-icons/tb";
+import { Github, Mail, Linkedin, Phone } from "lucide-react";
 import { footer } from "../../data/title";
 
 type Props = {};
 
 const Footer = ({}: Props) => {
   const socialClassName =
-    "hover:animate-pulse w-auto h-8 p-1.5 sm:h-10 sm:p-2 lg:h-12 xl:h-14 xl:p-2.5 2xl:h-16   bg-white bg-opacity-10 cursor-pointer hover:scale-105 transition-all  hover:opacity-80 duration-300 rounded-full";
+    "hover:animate-pulse w-auto h-8 p-1.5 sm:h-10 sm:p-2 lg:h-12 xl:h-14 xl:p-2.5 2xl:h-16 bg-white bg-opacity-10 cursor-pointer hover:scale-105 transition-all hover:opacity-80 duration-300 rounded-full";
+
   return (
     <div className="p-12 gap-3 lg:gap-4 xl:gap-5 2xl:gap-6 mt-auto flex flex-wrap justify-center items-center flex-col w-full bg-[#09132e] text-[#c9e1ec] text-sm shadow-lg">
       <div className="flex flex-row gap-3 sm:gap-4 lg:gap-5 2xl:gap-6">
-        <a href="https://www.linkedin.com/in/souheib-riache/" target="_blank">
-          <TbBrandLinkedin className={socialClassName} />
+        <a
+          href="https://www.linkedin.com/in/souheib-riache/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+          className="hover:text-[#37BCF8] transition-colors duration-300"
+        >
+          <Linkedin className={socialClassName} />
         </a>
-        <a href="https://github.com/souheibriache/" target="_blank">
-          <TbBrandGithub className={socialClassName} />
+        <a
+          href="https://github.com/souheibriache/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+          className="hover:text-[#37BCF8] transition-colors duration-300"
+        >
+          <Github className={socialClassName} />
         </a>
-        <a href="mailto:souheibriache@gmail.com" target="_blank">
-          <TbBrandGmail className={socialClassName} />
+        <a
+          href="mailto:souheibriache@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Email"
+          className="hover:text-[#37BCF8] transition-colors duration-300"
+        >
+          <Mail className={socialClassName} />
         </a>
-        <a href="tel:+33605584882" target="_blank">
-          <TbPhone className={socialClassName} />
+        <a
+          href="tel:+33605584882"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Phone"
+          className="hover:text-[#37BCF8] transition-colors duration-300"
+        >
+          <Phone className={socialClassName} />
         </a>
       </div>
 

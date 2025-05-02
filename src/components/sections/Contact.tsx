@@ -1,5 +1,7 @@
+"use client";
+
 import { useContext, useState } from "react";
-import { TbLoader, TbMailForward } from "react-icons/tb";
+import { Send, Loader2 } from "lucide-react";
 import { isValidEmail } from "../../data/checl-email";
 import SectionTitle from "../Custom/SectionTitle";
 import { toast } from "react-toastify";
@@ -57,7 +59,6 @@ const Contact = ({}: Props) => {
     const options = {
       publicKey: VITE_EMAILJS_PUBLIC_KEY,
     };
-    console.log({ env: import.meta.env });
 
     try {
       setLoading(true);
@@ -91,21 +92,27 @@ const Contact = ({}: Props) => {
   return (
     <div
       id="contact"
-      className="flex my-4 items-center justify-center flex-col mx-auto md:w-10/12 w-11/12 "
+      className="flex my-12 items-center justify-center flex-col mx-auto md:w-10/12 w-11/12"
     >
       <SectionTitle title={sections[4].name[language]} />
 
-      <div className="md:w-2/3 w-full text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
+      <div className="md:w-2/3 w-full text-white rounded-lg border border-[#464c6a] p-6 lg:p-8 shadow-lg bg-[#1a1f35] hover:shadow-xl hover:shadow-[#37BCF8]/10 transition-all duration-500">
         <Fade triggerOnce direction="up" duration={700}>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[#fff] flex flex-col gap-2">
+          <h2 className="text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl font-bold bg-gradient-to-r from-[#37BCF8] to-violet-600 bg-clip-text text-transparent mb-6">
             {contactText.title[language]}
-          </p>
-          <div className="mt-6 flex flex-col gap-4 text-xs sm:text-sm mg:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
-            <div className="flex flex-col gap-2 ">
-              <label className="">{contactText.labels.name[language]} </label>
+          </h2>
+
+          <form
+            className="mt-6 flex flex-col gap-6 text-xs sm:text-sm mg:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
+            onSubmit={handleSendMail}
+          >
+            <div className="flex flex-col gap-2">
+              <label className="font-medium text-[#37BCF8]">
+                {contactText.labels.name[language]}
+              </label>
               <input
                 placeholder={contactText.placeholders.name[language]}
-                className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+                className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-4 py-3 focus:shadow-md focus:shadow-[#37BCF8]/20"
                 type="text"
                 maxLength={100}
                 required={true}
@@ -118,11 +125,13 @@ const Contact = ({}: Props) => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label>{contactText.labels.email[language]}</label>
+              <label className="font-medium text-[#37BCF8]">
+                {contactText.labels.email[language]}
+              </label>
               <input
-                className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+                className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-4 py-3 focus:shadow-md focus:shadow-[#37BCF8]/20"
                 type="email"
-                placeholder={contactText.placeholders.name[language]}
+                placeholder={contactText.placeholders.email[language]}
                 maxLength={100}
                 required={true}
                 value={userInput.email}
@@ -142,13 +151,12 @@ const Contact = ({}: Props) => {
             </div>
 
             <div className="flex flex-col gap-2 relative">
-              <span className="absolute text-xs sm:text-xs md:text-xs lg:text-base xl:text-lg 2xl:text-xl opacity-70 text-white bottom-1 right-1">
-                {500 - userInput.message.length}/{messageSize}
-              </span>
-              <label>{contactText.labels.message[language]} </label>
+              <label className="font-medium text-[#37BCF8]">
+                {contactText.labels.message[language]}
+              </label>
               <textarea
                 placeholder={contactText.placeholders.message[language]}
-                className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+                className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#37BCF8] ring-0 outline-0 transition-all duration-300 px-4 py-3 focus:shadow-md focus:shadow-[#37BCF8]/20"
                 maxLength={messageSize}
                 name="message"
                 required={true}
@@ -156,10 +164,14 @@ const Contact = ({}: Props) => {
                   setUserInput({ ...userInput, message: e.target.value })
                 }
                 onBlur={checkRequired}
-                rows={4}
+                rows={6}
                 value={userInput.message}
               />
+              <span className="absolute text-xs sm:text-xs md:text-xs lg:text-base xl:text-lg 2xl:text-xl opacity-70 text-white bottom-3 right-3">
+                {500 - userInput.message.length}/{messageSize}
+              </span>
             </div>
+
             <div className="flex flex-col items-center gap-2">
               {error.required && (
                 <p className="text-sm text-red-400">
@@ -167,20 +179,19 @@ const Contact = ({}: Props) => {
                 </p>
               )}
               <button
+                type="submit"
                 disabled={sendButtonDisables()}
-                className="disabled:opacity-80 flex flex-row items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-[#37BCF8] to-violet-600 px-5 md:px-12 py-2 md:py-3 text-center text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
-                role="button"
-                onClick={handleSendMail}
+                className="disabled:opacity-80 flex flex-row items-center gap-3 hover:gap-5 rounded-full bg-gradient-to-r from-[#37BCF8] to-violet-600 px-8 md:px-12 py-3 md:py-4 text-center text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium uppercase tracking-wider text-white no-underline transition-all duration-300 ease-out hover:text-white hover:shadow-lg hover:shadow-[#37BCF8]/30 hover:translate-y-[-2px] w-full md:w-auto justify-center"
               >
                 <span>{contactText.button.send[language]}</span>
                 {loading ? (
-                  <TbLoader className="animate-spin" />
+                  <Loader2 className="animate-spin h-5 w-5" />
                 ) : (
-                  <TbMailForward className="w-auto h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7" />
+                  <Send className="w-5 h-5" />
                 )}
               </button>
             </div>
-          </div>
+          </form>
         </Fade>
       </div>
     </div>
