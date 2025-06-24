@@ -5,8 +5,21 @@ export const experiences = [
       FR: "Développeur Fullstack (Alternance)",
       EN: "Fullstack Developer (Apprenticeship)",
     },
+    company: "Cyberdian group",
+    duration: { FR: "(Oct 2024 - Présent)", EN: "(Oct 2024 - Present)" },
+    description: {
+      FR: "Développement et optimisation de Dane-cyber, plateforme de supervision des pare-feux réseau, en performant une refonte de l'interface utilisateur et le développement de nouvelles fonctionnalités frontend et backend",
+      EN: "Development and optimization of Dane-cyber, a network firewall supervision platform, performing a user interface redesign and developing new frontend and backend featuresRetryClaude can make mistakes. Please double-check responses.",
+    },
+  },
+  {
+    id: 1,
+    title: {
+      FR: "Développeur Fullstack (Alternance)",
+      EN: "Fullstack Developer (Apprenticeship)",
+    },
     company: "Olives Consulting",
-    duration: { FR: "(Oct 2023 - Présent)", EN: "(Oct 2023 - Present)" },
+    duration: { FR: "(Oct 2023 - Sep 2024)", EN: "(Oct 2023 - Sep 2024)" },
     description: {
       FR: "Développement d'un site e-commerce, gestion des systèmes backend, pipelines CI/CD, et écriture de tests unitaires.",
       EN: "Developing an e-commerce site, managing backend systems, CI/CD pipelines, and writing unit tests.",

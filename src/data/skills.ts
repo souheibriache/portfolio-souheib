@@ -26,6 +26,9 @@ import postgres from "../assets/skills/postgres.png";
 import postman from "../assets/skills/postman.png";
 import redis from "../assets/skills/redis.png";
 import vscode from "../assets/skills/vscode.png";
+import keycloak from "../assets/skills/keycloak.svg";
+import mui from "../assets/skills/mui.png";
+import cassandra from "../assets/skills/cassandra.png";
 const skillsCategories = [
   {
     category: "Langages",
@@ -117,6 +120,11 @@ const skills: { name: string; icon: string; category: string }[] = [
     icon: css,
     category: skillsCategories[1].category,
   },
+  {
+    name: "MaterialUI",
+    icon: mui,
+    category: skillsCategories[1].category,
+  },
   // Back-end
   {
     name: "Node JS",
@@ -146,6 +154,11 @@ const skills: { name: string; icon: string; category: string }[] = [
   {
     name: "Swagger",
     icon: swagger,
+    category: skillsCategories[2].category,
+  },
+  {
+    name: "Keycloak",
+    icon: keycloak,
     category: skillsCategories[2].category,
   },
   // Outils
@@ -208,6 +221,11 @@ const skills: { name: string; icon: string; category: string }[] = [
   {
     name: "PostgreSQL",
     icon: postgres,
+    category: skillsCategories[3].category,
+  },
+  {
+    name: "Cassandra",
+    icon: cassandra,
     category: skillsCategories[3].category,
   },
   {

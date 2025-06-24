@@ -1,23 +1,24 @@
 import wedort from "../assets/projects/wedort.png";
-import busybe from "../assets/projects/busybe.png";
-import avocado from "../assets/projects/avocado.png";
-import food from "../assets/projects/food.png";
+import Joyit from "../assets/projects/joy-it.png";
+import LagServices from "../assets/projects/lag-services.png";
+import dane from "../assets/projects/dane.png";
 
 import typescript from "../assets/skills/typescript.png";
 import react from "../assets/skills/react.png";
 import node from "../assets/skills/nodejs.png";
 import githubActions from "../assets/skills/GitHub Actions.png";
-import angular from "../assets/skills/angular.png";
+import cannsandra from "../assets/skills/cassandra.png";
+import keycloak from "../assets/skills/keycloak.svg";
 import docker from "../assets/skills/docker.png";
 import graphql from "../assets/skills/graphql.png";
 import kubernetes from "../assets/skills/kubernetes.png";
 import linux from "../assets/skills/linux.png";
-import mongodb from "../assets/skills/mongodb.png";
 import nestjs from "../assets/skills/nestjs.png";
 import nextjs from "../assets/skills/nextjs.png";
 import nginx from "../assets/skills/nginx.png";
 import postgres from "../assets/skills/postgres.png";
 import redis from "../assets/skills/redis.png";
+import tailwind from "../assets/skills/Tailwind CSS.png";
 const projects: {
   name: string;
   img: string;
@@ -26,13 +27,52 @@ const projects: {
   skills?: string[];
 }[] = [
   {
+    name: "DANE Cyber",
+    img: dane,
+    description: {
+      FR: "Développement et optimisation de Dane-cyber, plateforme de supervision des pare-feux réseau, en performant une refonte de l'interface utilisateur et le développement de nouvelles fonctionnalités frontend et backend pour améliorer la sécurité et les performances.",
+      EN: "Development and optimization of Dane-cyber, a network firewall supervision platform, performing a user interface redesign and developing new frontend and backend features to enhance security and performance.",
+    },
+    link: "https://www.dane-cyber.com/",
+    skills: [react, nestjs, node, cannsandra, redis, kubernetes, keycloak],
+  },
+  {
+    name: "Joy-it",
+    img: Joyit,
+    description: {
+      FR: "Conception et implémentation d'une application fullstack complète avec interface client, dashboard administrateur et backend, incluant le déploiement sur Kubernetes et pipeline CI/CD. Joy-it permet aux CSE d'entreprises d'organiser et planifier des événements pour leurs collaborateurs en solution clé en main.",
+      EN: "Designed and implemented a complete fullstack application with client interface, admin dashboard, and backend, including Kubernetes deployment and CI/CD pipeline. Joy-it enables company CSEs to organize and schedule events for their employees as a turnkey solution.",
+    },
+    link: "https://joy-it.fr",
+    skills: [
+      react,
+      tailwind,
+      typescript,
+      nestjs,
+      kubernetes,
+      docker,
+      nginx,
+      linux,
+    ],
+  },
+  {
+    name: "Lag-service",
+    img: LagServices,
+    description: {
+      FR: "Projet freelance pour un client spécialisé dans l'investissement et l'immobilier. Développement d'une plateforme permettant la gestion de ses propriétés, le traitement des demandes de logement et l'offre de services d'accompagnement personnalisés.",
+      EN: "Freelance project for a client specialized in investment and real estate. Development of a platform for managing properties, handling housing requests, and offering personalized support services.",
+    },
+    link: "https://lag-services.com/",
+    skills: [nextjs, react, nestjs, docker, nginx, linux],
+  },
+  {
     name: "Wedort",
     img: wedort,
     description: {
-      FR: "Au sein de Smartinia, j'étais responsable de la conception et du développement des fonctionnalités frontend et backend d'une application similaire à Uber pour les objets lourds (VTC). Gestion en temps réel pour clients, conducteurs, partenaires et personnel, avec création de trois tableaux de bord et deux applications mobiles.",
-      EN: "At Smartinia, I was responsible for designing and developing frontend and backend features for an application similar to Uber but for heavy items (VTC). Real-time management for customers, drivers, partners, and staff, with the creation of three dashboards and two mobile apps.",
+      FR: "Au sein de Smartinia, j'étais responsable de la conception et du développement des fonctionnalités frontend et backend d'une application VTC pour les objets lourds. Gestion en temps réel pour clients, conducteurs, partenaires et personnel, avec création de trois dashboards.",
+      EN: "At Smartinia, I was responsible for designing and developing frontend and backend features for a VTC application for heavy items. Real-time management for customers, drivers, partners, and staff, with the creation of three dashboards.",
     },
-    link: "https://wedort.com",
+    link: "https://play.google.com/store/apps/details?id=com.wedort.driver&hl=fr&pli=1",
     skills: [
       nestjs,
       typescript,
@@ -44,36 +84,6 @@ const projects: {
       docker,
       kubernetes,
     ],
-  },
-  {
-    name: "BusyBe",
-    img: busybe,
-    description: {
-      FR: "J'ai développé une plateforme pour connecter des étudiants freelances avec des offres de jobs. Intégration API avec une application mobile et un tableau de bord pour faciliter l'accès aux opportunités d'emploi pour les étudiants au Royaume-Uni.",
-      EN: "I developed a platform to connect freelance students with job opportunities. API integration with a mobile app and a dashboard to facilitate access to job opportunities for students in the UK.",
-    },
-    link: "https://busybe.co.uk",
-    skills: [nestjs, typescript, graphql, react, postgres, docker],
-  },
-  {
-    name: "Avocado Markt",
-    img: avocado,
-    description: {
-      FR: "E-commerce pour un magasin autrichien, avec une gestion des produits et une expérience utilisateur intuitive. J'ai travaillé sur la conception du backend et du frontend pour offrir une solution complète aux clients.",
-      EN: "E-commerce for an Austrian store, with product management and an intuitive user experience. I worked on both backend and frontend design to deliver a complete solution to the clients.",
-    },
-    link: "https://www.avocadomarkt.com/en",
-    skills: [nestjs, typescript, graphql, nextjs, linux, postgres, docker],
-  },
-  {
-    name: "Food order App",
-    img: food,
-    description: {
-      FR: "Projet personnel permettant aux utilisateurs de commander en ligne dans les restaurants. Gestion des commandes, des paiements en ligne et de la navigation dans le menu pour améliorer l'expérience client.",
-      EN: "Personal project allowing users to order food online from restaurants. Management of orders, online payments, and menu navigation to enhance the customer experience.",
-    },
-    link: "https://github.com/souheibriache",
-    skills: [node, typescript, angular, githubActions, mongodb, docker],
   },
 ];
 
