@@ -2,28 +2,20 @@ export const experiences = [
   {
     id: 1,
     title: {
-      FR: "Développeur Fullstack (Alternance)",
-      EN: "Fullstack Developer (Apprenticeship)",
+      FR: "Développeur Full Stack (Alternance)",
+      EN: "Full Stack Developer (Apprenticeship)",
     },
-    company: "Cyberdian group",
-    duration: { FR: "(Oct 2024 - Présent)", EN: "(Oct 2024 - Present)" },
+    company: "Cyberdian Group",
+    duration: {
+      FR: "Oct 2023 - Août 2025",
+      EN: "Oct 2023 - Aug 2025",
+    },
     description: {
-      FR: "Développement et optimisation de Dane-cyber, plateforme de supervision des pare-feux réseau, en performant une refonte de l'interface utilisateur et le développement de nouvelles fonctionnalités frontend et backend",
-      EN: "Development and optimization of Dane-cyber, a network firewall supervision platform, performing a user interface redesign and developing new frontend and backend featuresRetryClaude can make mistakes. Please double-check responses.",
+      FR: "Développement et optimisation d'une plateforme de supervision des pare-feux réseau (Dane-cyber). Refonte complète de l'UI/UX, développement de fonctionnalités avancées backend/frontend, intégration de systèmes temps réel avec WebSocket, et optimisation des performances. Mise en place d'une architecture microservices avec gestion centralisée des utilisateurs et audit trail.",
+      EN: "Development and optimization of a network firewall supervision platform (Dane-cyber). Complete UI/UX redesign, advanced backend/frontend features development, real-time systems integration with WebSocket, and performance optimization. Implementation of microservices architecture with centralized user management and audit trail.",
     },
-  },
-  {
-    id: 1,
-    title: {
-      FR: "Développeur Fullstack (Alternance)",
-      EN: "Fullstack Developer (Apprenticeship)",
-    },
-    company: "Olives Consulting",
-    duration: { FR: "(Oct 2023 - Sep 2024)", EN: "(Oct 2023 - Sep 2024)" },
-    description: {
-      FR: "Développement d'un site e-commerce, gestion des systèmes backend, pipelines CI/CD, et écriture de tests unitaires.",
-      EN: "Developing an e-commerce site, managing backend systems, CI/CD pipelines, and writing unit tests.",
-    },
+    technologies:
+      "NestJS, ReactJS, TypeScript, TailwindCSS, WebSocket, Redis, Cassandra, Keycloak, Docker, Kubernetes",
   },
   {
     id: 2,

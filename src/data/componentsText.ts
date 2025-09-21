@@ -23,7 +23,7 @@ const sections: { name: { FR: string; EN: string }; linkTo: string }[] = [
 
 const resume = { FR: "CV", EN: "Resume" };
 const resumeUrl =
-  "https://drive.google.com/file/d/1Dj4g0gUcpdRjigIRtr11XuXYXbhs-JKa/view?usp=sharing";
+  "https://drive.google.com/file/d/1jYED_zsgiZiYeq2LoeScEDRarHJleDVu/view?usp=sharing";
 
 const visiter = { FR: "Visiter", EN: "Visit" };
 

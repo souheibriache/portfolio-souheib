@@ -72,7 +72,7 @@ const projects: {
       FR: "Au sein de Smartinia, j'étais responsable de la conception et du développement des fonctionnalités frontend et backend d'une application VTC pour les objets lourds. Gestion en temps réel pour clients, conducteurs, partenaires et personnel, avec création de trois dashboards.",
       EN: "At Smartinia, I was responsible for designing and developing frontend and backend features for a VTC application for heavy items. Real-time management for customers, drivers, partners, and staff, with the creation of three dashboards.",
     },
-    link: "https://play.google.com/store/apps/details?id=com.wedort.driver&hl=fr&pli=1",
+    link: "https://wedort.com/",
     skills: [
       nestjs,
       typescript,
