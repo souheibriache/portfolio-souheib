@@ -1,4 +1,3 @@
-"use client";
 
 import { useContext } from "react";
 import { LanguageContext } from "../../context/languageContext";
@@ -23,7 +22,6 @@ type Props = {
 };
 
 const ExperienceCard = ({
-  id,
   title,
   company,
   duration,

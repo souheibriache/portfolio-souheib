@@ -10,7 +10,7 @@ import githubActions from "../assets/skills/GitHub Actions.png";
 import cannsandra from "../assets/skills/cassandra.png";
 import keycloak from "../assets/skills/keycloak.svg";
 import docker from "../assets/skills/docker.png";
-import graphql from "../assets/skills/graphql.png";
+// import graphql from "../assets/skills/graphql.png";
 import kubernetes from "../assets/skills/kubernetes.png";
 import linux from "../assets/skills/linux.png";
 import nestjs from "../assets/skills/nestjs.png";
